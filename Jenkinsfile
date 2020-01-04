@@ -7,13 +7,13 @@ node{
            
            git 'https://github.com/ejemaster/mathprojet.git'
        } 
-      
+      stage ('Projekt Clean') {
+           bat 'mvn clean'
+       }
        stage ('Build - Maven Package') {
            bat 'mvn package'
        }
-       stage ('Projekt Clean') {
-           bat 'mvn clean'
-       }
+       
       
        stage('Build - Junit Test Stage')
        {
