@@ -34,7 +34,7 @@ node{
       }
     stage('Remove Unused docker image') {
      
-        bat "docker rmi $img:$BUILD_ID"
+        bat "docker rmi $img:$(env.BUILD_ID)"
       
     }
 }
