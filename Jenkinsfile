@@ -7,12 +7,14 @@ node(label: 'docker'){
            
            git 'https://github.com/ejemaster/mathprojet.git'
        }
-       
+       stage ('Projekt Clean') {
+           bat 'mvn clean'
+       }
        stage ('Build - Maven Package') {
            bat 'mvn package'
        }
 
-       stage('Junit - Test Stage')
+       stage('Build - Junit Test Stage')
        {
            bat 'mvn test'
        }
