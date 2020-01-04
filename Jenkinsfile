@@ -33,8 +33,8 @@ node{
           }
       }
     stage('Remove Unused docker image') {
-      steps{
+     
         bat "docker rmi $img:$BUILD_NUMBER"
-      }
+      
     }
 }
