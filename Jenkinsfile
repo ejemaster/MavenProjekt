@@ -23,7 +23,7 @@ node{
       stage('Test image') {
        
 
-     bat "docker run -e img2=$IMAGE"
+     bat "docker run -it ejemaster/mathprojet:latest"
         
     }
       stage('Push- Push der Image auf Dockerhub'){
