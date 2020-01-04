@@ -6,14 +6,15 @@ node{
        stage ('Clone Projet'){
            
            git 'https://github.com/ejemaster/mathprojet.git'
+       } 
+      
+       stage ('Build - Maven Package') {
+           bat 'mvn package'
        }
        stage ('Projekt Clean') {
            bat 'mvn clean'
        }
-       stage ('Build - Maven Package') {
-           bat 'mvn package'
-       }
-
+      
        stage('Build - Junit Test Stage')
        {
            bat 'mvn test'
