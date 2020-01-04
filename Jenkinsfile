@@ -23,9 +23,8 @@ node{
       stage('Test image') {
        
 
-        img.inside {
-           bat 'docker run -it ("$img")'
-        }
+     bat 'docker run -it ("$img")'
+        
     }
       stage('Push- Push der Image auf Dockerhub'){
           docker.withRegistry('https://registry.hub.docker.com', 'docker-hub'){
