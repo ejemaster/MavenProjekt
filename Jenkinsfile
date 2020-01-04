@@ -23,7 +23,7 @@ node{
       stage('Test image') {
        
 
-     bat "docker run - img"
+     bat "docker run -e img2=$IMAGE"
         
     }
       stage('Push- Push der Image auf Dockerhub'){
