@@ -1,4 +1,4 @@
-node(label: 'docker'){
+node{
  def registryProjet='registry.hub.docker.com/ejemaster/mathprojet' 
  
  def IMAGE="${registryProjet}:image-${env.BUILD_ID}"
