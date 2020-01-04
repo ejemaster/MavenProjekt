@@ -21,11 +21,10 @@ node{
      docker.build("$IMAGE", ".")
  }
       stage('Test image') {
-        /* Ideally, we would run a test framework against our image.
-         * For this example, we're using a Volkswagen-type approach ;-) */
+       
 
         img.inside {
-            bat 'echo "Tests passed"'
+           bat 'docker run -it ("$img")'
         }
     }
       stage('Push- Push der Image auf Dockerhub'){
@@ -34,5 +33,9 @@ node{
           img.push("latest")
           }
       }
-    
+    stage('Remove Unused docker image') {
+      steps{
+        bat "docker rmi $img:$BUILD_NUMBER"
+      }
+    }
 }
