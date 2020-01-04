@@ -25,7 +25,7 @@ node{
          * For this example, we're using a Volkswagen-type approach ;-) */
 
         img.inside {
-            sh 'echo "Tests passed"'
+            bat 'echo "Tests passed"'
         }
     }
       stage('Push- Push der Image auf Dockerhub'){
