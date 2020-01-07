@@ -5,7 +5,7 @@ node{
      
        stage ('Clone Projet'){
            
-           git 'https://github.com/ejemaster/mathprojet.git'
+           git 'https://github.com/ejemaster/MavenProjekt.git'
        }
        
        stage ('Build - Maven Package') {
