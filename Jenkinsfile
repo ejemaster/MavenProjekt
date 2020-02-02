@@ -9,12 +9,12 @@ node{
        }
        
        stage ('Build - Maven Package') {
-           sh 'mvn package'
+           bat 'mvn package'
        }
 
        stage('Junit - Test Stage')
        {
-           sh 'mvn test'
+           bat 'mvn test'
        }
 
  def  img = stage ('Build der Image -Docker Image') {
@@ -23,7 +23,7 @@ node{
       stage('Test image') {
        
 
-     sh "docker run  ejemaster/mathprojet"
+     bat "docker run  ejemaster/mathprojet"
         
     }
       stage('Push- Push der Image auf Dockerhub'){
@@ -34,7 +34,7 @@ node{
       }
     stage('Remove Unused docker image') {
      
-        sh " docker rmi ejemaster/mathprojet"
+        bat " docker rmi ejemaster/mathprojet"
       
     }
 }
