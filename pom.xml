@@ -59,6 +59,9 @@
 				<version>3.0.0-M4</version>
 				<goals><goal>test</goal></goals>
 				<configuration>
+					<parallel>all</parallel>
+                                        <threadCount>10</threadCount>
+                                        <redirectTestOutputToFile>false</redirectTestOutputToFile>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
