@@ -60,7 +60,7 @@
 				<goals><goal>test</goal></goals>
 				<configuration>
 					<parallel>all</parallel>
-                                        <threadCount>10</threadCount>
+                                        <threadCount>7</threadCount>
                                         <redirectTestOutputToFile>false</redirectTestOutputToFile>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
