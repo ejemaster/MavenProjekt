@@ -9,7 +9,7 @@ node{
        }
        
        stage ('Build - Maven Package') {
-           bat 'mvn package'
+           bat 'mvn -DskipTests=true  package'
        }
 
        stage('Junit - Test Stage')
